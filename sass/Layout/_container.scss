@@ -1,0 +1,124 @@
+
+// =========INDEX=========
+// LOCALISATION
+// HERO
+// TUTO
+// RESTAURANTS
+
+
+// -----------LOCALISATION-----------
+.locations {
+ @extend %flexCenter;
+  height: 40px;
+  background-color: rgba(234, 234, 232, 0.747);
+  font-size: 18px;
+    .location {
+          margin-right: 20px;
+       
+      &__icon {
+          margin-right: 10px;
+          color:$color-dark-clair;
+        }
+      &__text {
+          font-weight: bold;
+          color:$color-dark-tres-clair;
+          text-shadow: 6px rgba(247, 247, 246, 0.747);
+        }
+      }
+  }
+  
+  // -----------HERO-----------
+  .hero{
+    @extend %flexCenter;
+    padding: 40px 30px 55px 30px;
+    background-color: $ombre-light;
+    text-align: center;
+    flex-direction: column;
+    &__titre {
+        margin-bottom: 20px;
+        font-weight: bolder; 
+    }
+    &__text {
+        margin-bottom: 30px;
+        color: 	rgb(169,169,169);
+    }
+}
+
+// -----------TUTO-----------
+.tuto{
+  padding: 20px;
+  &__titre {
+    margin: 40px 0 30px 0px;
+    text-shadow: #000000;
+    font-weight: bolder;
+  }
+  &__steps {
+    padding-left: 0;
+    counter-reset: repas;
+    &__card {
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+      counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+      margin-bottom: 10px;
+      font-weight: bold;
+      background-color: rgb(247, 247, 247);
+      margin: 20px 10px 30px 10px;
+      padding: 1.75rem 1.75rem 1.75rem 0;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      &__icon {
+        margin-left: 30px;
+        color: rgba(0,0,0,0.40);
+        font-size: 20px;
+      }
+      &__text {
+        margin-left: 20px;
+        color: rgba(0, 0, 0, 0.438);
+        text-shadow: 0.5px 0.5px 0.5px rgba(41, 41, 41, 0.852);
+        font-size: 17px;
+      }
+      &:before {
+        content:counter(repas); /* on affiche le compteur */
+        padding: 5px 10px 5px 10px;
+        margin-right: 8px;
+        vertical-align: top;
+        background: #9356DC;
+        -moz-border-radius: 60px;
+        border-radius: 60px;
+        font-weight: bold;
+        font-size: 0.8em;
+        color: white;	
+        position: absolute;
+        left: 15px;
+      }
+    }
+  }
+}
+
+// -----------RESTAURANTS-----------
+.restaurants {
+  padding: 20px;
+  background-color: $ombre-light;
+  &__title {
+    margin: 30px 0 20px 0;
+  }
+  &__card {
+    position: relative;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    @include shadow;
+    &__img {
+        display: block;
+        max-height: 175px;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+    }
+    &__txt {
+        padding: 20px 15px 20px 15px;
+       @include flexBetween;
+    }
+  }  
+}
