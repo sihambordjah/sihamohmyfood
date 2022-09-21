@@ -1,0 +1,22 @@
+.footer {
+    display: block;
+    background-color: #353535;
+    padding: 25px;
+    &__logo {
+        color: #fff;
+        font-family: Shrikhand,"cursive";
+        font-size: 24px;
+        margin-bottom: 15px; 
+    }
+    &__list{
+        margin-bottom: 10px;
+    }
+    &__txt {
+        color: rgb(255,250,250);
+    }
+    &__icons {
+        margin-right: 10px;
+    }
+}
+
+
