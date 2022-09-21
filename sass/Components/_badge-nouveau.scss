@@ -1,0 +1,11 @@
+.badge_nouveau{
+    display: inline-block;
+    @include flexcenter;
+    height: 30px;
+    width: 80px;
+    background-color: $color-tertiaire;
+    color: #008766;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
