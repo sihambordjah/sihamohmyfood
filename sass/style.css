@@ -1,0 +1,226 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  padding: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.hero, .locations {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  border: 0;
+  line-height: 2.5;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 30px;
+  text-shadow: 1px 1px 1px rgb(44, 43, 43);
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 500ms;
+  opacity: 1;
+}
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.badge_nouveau {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 80px;
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: #f7f7f7;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.locations {
+  height: 40px;
+  background-color: rgba(234, 234, 232, 0.747);
+  font-size: 18px;
+}
+.locations .location {
+  margin-right: 20px;
+}
+.locations .location__icon {
+  margin-right: 10px;
+  color: rgb(51, 52, 51);
+}
+.locations .location__text {
+  font-weight: bold;
+  color: rgb(80, 80, 80);
+  text-shadow: 6px rgba(247, 247, 246, 0.747);
+}
+
+.hero {
+  padding: 40px 30px 55px 30px;
+  background-color: #f6f6f6;
+  text-align: center;
+  flex-direction: column;
+}
+.hero__titre {
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+.hero__text {
+  margin-bottom: 30px;
+  color: rgb(169, 169, 169);
+}
+
+.tuto {
+  padding: 20px;
+}
+.tuto__titre {
+  margin: 40px 0 30px 0px;
+  text-shadow: #000000;
+  font-weight: bolder;
+}
+.tuto__steps {
+  padding-left: 0;
+  counter-reset: repas;
+}
+.tuto__steps__card {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: rgb(247, 247, 247);
+  margin: 20px 10px 30px 10px;
+  padding: 1.75rem 1.75rem 1.75rem 0;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.tuto__steps__card__icon {
+  margin-left: 30px;
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+}
+.tuto__steps__card__text {
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.438);
+  text-shadow: 0.5px 0.5px 0.5px rgba(41, 41, 41, 0.852);
+  font-size: 17px;
+}
+.tuto__steps__card:before {
+  content: counter(repas); /* on affiche le compteur */
+  padding: 5px 10px 5px 10px;
+  margin-right: 8px;
+  vertical-align: top;
+  background: #9356DC;
+  border-radius: 60px;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+  position: absolute;
+  left: 15px;
+}
+
+.restaurants {
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+.restaurants__title {
+  margin: 30px 0 20px 0;
+}
+.restaurants__card {
+  position: relative;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.restaurants__card__img {
+  display: block;
+  max-height: 175px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants__card__txt {
+  padding: 20px 15px 20px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  display: block;
+  background-color: #353535;
+  padding: 25px;
+}
+.footer__logo {
+  color: #fff;
+  font-family: Shrikhand, "cursive";
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.footer__list {
+  margin-bottom: 10px;
+}
+.footer__txt {
+  color: rgb(255, 250, 250);
+}
+.footer__icons {
+  margin-right: 10px;
+}/*# sourceMappingURL=style.css.map */
