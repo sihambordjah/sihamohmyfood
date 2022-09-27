@@ -10,7 +10,6 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -47,6 +46,64 @@ h2 {
   justify-content: center;
 }
 
+@-webkit-keyframes slidemenu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slidemenu {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.menu .delay-1 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.menu .delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.menu .delay-3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.menu .delay-4 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu .delay-5 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.menu .delay-6 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.menu .delay-7 {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.menu .delay-8 {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+.menu .delay-9 {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.menu .delay-10 {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
 .btn {
   border: 0;
   line-height: 2.5;
@@ -81,6 +138,29 @@ h2 {
   position: absolute;
   right: 10px;
   top: 15px;
+}
+
+.heart {
+  font-size: 25px;
+  color: grey;
+  margin-right: 20px;
+}
+.heart:hover {
+  -webkit-animation: fill 1s ease-out;
+          animation: fill 1s ease-out;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.check_icon {
+  color: white;
+  font-size: 20px;
+  opacity: 0;
+  transform: rotate(0deg);
+  transition: all 0.6s ease-in-out;
 }
 
 .header {
@@ -240,4 +320,102 @@ h2 {
   width: 2rem;
   top: 25%;
   transform: translate(-30%);
+}
+
+.hero_resto img {
+  height: 250px;
+  width: 100%;
+}
+
+.main {
+  background-color: #f6f6f6;
+  margin-top: -45px;
+  position: relative;
+  z-index: 1;
+  padding: 35px 15px 80px 15px;
+  border-radius: 45px 45px 0 0;
+}
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 45px;
+}
+
+/*--------------pour le menu-------------------*/
+.menu .container {
+  margin: 30px 0 30px 0;
+}
+.menu .botton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__entrees {
+  text-transform: uppercase;
+  color: rgb(51, 52, 51);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.menu__entrees u {
+  -webkit-text-decoration: #99E2D0 3px underline;
+          text-decoration: #99E2D0 3px underline;
+  text-underline-offset: 0.5rem;
+}
+.menu__card {
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-shadow: -5px -5px 41px 5px #D8D8D8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: slidemenu 0.5s;
+          animation: slidemenu 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.57, -0.3, 0.34, 1.2);
+          animation-timing-function: cubic-bezier(0.57, -0.3, 0.34, 1.2);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  transform: scale(0);
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu__card__txt {
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card__txt--over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card__price {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.menu__card__checkbox {
+  height: 70px;
+  width: 80px;
+  background-color: #99E2D0;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  margin-right: -70px;
+  margin-left: 25px;
+}
+.menu__card:hover :nth-child(3) {
+  opacity: 1;
+  margin-right: 0;
+}
+.menu__card:hover .check_icon {
+  opacity: 1;
+  transform: rotate(360deg);
 }/*# sourceMappingURL=style.css.map */
