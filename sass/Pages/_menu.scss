@@ -37,7 +37,8 @@
 /*--------------pour le menu-------------------*/
 .menu {
     & .container {
-        margin: 30px 0 30px 0;
+        margin-top: 30px;
+        margin-bottom:30px; 
     }
     & .botton {
         @include flexcenter;
@@ -48,9 +49,9 @@
         font-weight: 500;
         margin-bottom: 20px;
             & u {
-                text-decoration: $color-tertiaire 3px underline;
-                text-underline-offset: 0.5rem;
-            } 
+            text-decoration: $color-tertiaire 3px underline;
+            text-underline-offset: 0.5rem;
+        } 
     }
 
     &__card {
@@ -78,14 +79,13 @@
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
-
         }
-            &__price {
+        &__price {
             margin-top: 20px;
             margin-left: 20px;
             
             }
-            &__checkbox {
+        &__checkbox {
                 height: 70px;
                 width: 80px;
                 background-color: $color-tertiaire;
@@ -96,16 +96,14 @@
                 margin-right: -70px;
                 margin-left: 25px;
             }   
-
-            &:hover :nth-child(3) {
+        &:hover :nth-child(3) {
                 opacity: 1;
                 margin-right: 0;
             }   
-            &:hover .check_icon {
+        &:hover .check_icon {
                 opacity: 1;
                 transform: rotate(360deg);
-
-            }          
+        }          
     }
 }
 
