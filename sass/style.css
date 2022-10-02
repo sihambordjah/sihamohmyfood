@@ -12,12 +12,13 @@ html, body {
   font-size: 14px;
 }
 
-main {
+main, header, footer {
+  max-width: 1440px;
+  margin: auto;
   display: block;
 }
 
 img {
-  max-width: 100%;
   padding: 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -40,10 +41,17 @@ h2 {
   font-size: 24px;
 }
 
-.hero, .locations, .header {
+.tuto__steps__card:before, .hero, .locations, .header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container_loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @-webkit-keyframes slidemenu {
@@ -64,8 +72,8 @@ h2 {
   }
 }
 .menu .delay-1 {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .menu .delay-2 {
   -webkit-animation-delay: 0.2s;
@@ -104,6 +112,72 @@ h2 {
           animation-delay: 1.8s;
 }
 
+@media screen and (min-width: 799px) {
+  .tuto__steps {
+    display: flex;
+    flex: wrap;
+  }
+  .tuto__steps__card {
+    flex: 1;
+    margin: 0;
+    margin-left: 7rem;
+  }
+  .restaurants__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .restaurants__container .restaurants__card {
+    width: 700px;
+    margin: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .menu__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu__container .container {
+    margin-left: 30px;
+  }
+  .menu__container .container .menu__card {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__container .restaurants__card {
+    width: 450px;
+  }
+  .menu__container {
+    display: flex;
+  }
+  .menu__container .container {
+    flex: 1 1 auto;
+    margin-left: 15px;
+  }
+  .menu__container .container .menu__card {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .restaurants__container .restaurants__card {
+    width: 550px;
+  }
+  .menu__container .container .menu__card {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hero_resto img {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+  }
+}
 .btn {
   border: 0;
   line-height: 2.5;
@@ -164,6 +238,77 @@ h2 {
   transition: all 0.6s ease-in-out;
 }
 
+.container_loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgb(80, 80, 80);
+  z-index: 10000;
+  -webkit-animation: jump 3s;
+          animation: jump 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.container_loader__text {
+  color: #FF79DA;
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.container_loader__loading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container_loader__loading .line_box {
+  width: 40%;
+  height: 20px;
+  border: 2px solid #9356DC;
+  border-radius: 20px;
+}
+.container_loader__loading .line_box .line {
+  height: 16px;
+  border-radius: 20px;
+  background: #99E2D0;
+  -webkit-animation: loading 2s forwards cubic-bezier(0, 0, 1, 1);
+          animation: loading 2s forwards cubic-bezier(0, 0, 1, 1);
+}
+
+@-webkit-keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes jump {
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
+@keyframes jump {
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
 .header {
   height: 70px;
   background-color: #f7f7f7;
@@ -204,7 +349,10 @@ h2 {
 }
 
 .tuto {
-  padding: 20px;
+  padding: 2rem 1rem;
+}
+.tuto .tuto-container {
+  position: relative;
 }
 .tuto__titre {
   margin: 40px 0 30px 0px;
@@ -212,10 +360,12 @@ h2 {
   font-weight: bolder;
 }
 .tuto__steps {
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   counter-reset: repas;
 }
 .tuto__steps__card {
+  position: relative;
   display: flex;
   align-items: center;
   list-style-type: none;
@@ -241,19 +391,22 @@ h2 {
 }
 .tuto__steps__card:before {
   content: counter(repas); /* on affiche le compteur */
-  padding: 5px 10px 5px 10px;
-  margin-right: 8px;
-  vertical-align: top;
+  /*padding: 7px 10px 7px 10px;*/
+  height: 1.75rem;
+  width: 1.75rem;
+  /*vertical-align: top;*/
   background: #9356DC;
-  border-radius: 60px;
+  border-radius: 50%;
   font-weight: bold;
-  font-size: 0.8em;
+  font-size: 13px;
   color: white;
   position: absolute;
-  left: 15px;
+  left: -13px;
 }
 
 .restaurants {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background-color: #f6f6f6;
 }
@@ -342,7 +495,8 @@ h2 {
 
 /*--------------pour le menu-------------------*/
 .menu .container {
-  margin: 30px 0 30px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .menu .botton {
   display: flex;
