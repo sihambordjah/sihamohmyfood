@@ -46,16 +46,21 @@
 
 // -----------TUTO-----------
 .tuto{
-  padding: 20px;
+  padding: 2rem 1rem;
+ & .tuto-container {
+    position: relative;
+  }
   &__titre {
     margin: 40px 0 30px 0px;
     text-shadow: #000000;
     font-weight: bolder;
   }
   &__steps {
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
     counter-reset: repas;
     &__card {
+      position: relative;
       display: flex;
       align-items: center;
       list-style-type: none;
@@ -80,17 +85,18 @@
       }
       &:before {
         content:counter(repas); /* on affiche le compteur */
-        padding: 5px 10px 5px 10px;
-        margin-right: 8px;
-        vertical-align: top;
+        /*padding: 7px 10px 7px 10px;*/
+        height: 1.75rem;
+        width: 1.75rem;
+        @extend %flexCenter;
+        /*vertical-align: top;*/
         background: #9356DC;
-        -moz-border-radius: 60px;
-        border-radius: 60px;
+        border-radius: 50%;
         font-weight: bold;
-        font-size: 0.8em;
+        font-size: 13px;
         color: white;	
         position: absolute;
-        left: 15px;
+        left: -13px;
       }
     }
   }
@@ -98,6 +104,8 @@
 
 // -----------RESTAURANTS-----------
 .restaurants {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background-color: $ombre-light;
   &__title {
