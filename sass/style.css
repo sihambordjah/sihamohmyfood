@@ -115,7 +115,7 @@ h2 {
 @media screen and (min-width: 799px) {
   .tuto__steps {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
   }
   .tuto__steps__card {
     flex: 1;
@@ -330,7 +330,7 @@ h2 {
 .locations .location__text {
   font-weight: bold;
   color: rgb(80, 80, 80);
-  text-shadow: 6px rgba(247, 247, 246, 0.747);
+  text-shadow: 5px 6px rgba(247, 247, 246, 0.747);
 }
 
 .hero {
@@ -356,7 +356,7 @@ h2 {
 }
 .tuto__titre {
   margin: 40px 0 30px 0px;
-  text-shadow: #000000;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0);
   font-weight: bolder;
 }
 .tuto__steps {
