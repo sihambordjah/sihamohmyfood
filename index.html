@@ -14,8 +14,20 @@
     <title>OhMyFood</title>
 </head>
 <body>
-  
-    <!---------------------Header---------------------->
+    <!-----------------LOADER------------------>
+    <section class="loader">
+        <div class="container_loader">
+            <div class="container_loader__text">
+                <h1>Loading...</h1>
+            </div>
+            <div class="container_loader__loading">
+                <div class="line_box">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------Header----------->
     <header class="header">
         <img class="header__Logo" src="images/logo/ohmyfood.png" height="30" width="173" alt="Ohmyfood logo"> </div>
     </header>
@@ -35,7 +47,7 @@
         </section>
         <!-----------------Section Fonctionnement----------------->
         <section class="tuto">
-            
+            <div class="tuto-container">
                 <h2 class="tuto__titre">Fonctionnement</h2>
                 <ol class="tuto__steps">
                     <li class="tuto__steps__card">
@@ -51,13 +63,14 @@
                         <span class="tuto__steps__card__text">Dégustez au restaurant</span>
                     </li>
                 </ol>
+            </div>
           </section>
         <!-------------------Section Restaurant------------------->
         <section class="restaurants">
 
             <h2 class="restaurants__title">Restaurants</h2>
-            <div class="container">
-                <div class="container__card">
+            <div class="restaurants__container">
+                <div class="card">
                     <a href="./pages_resto_html/menu_la_palette_du_gout.html">
                         <figure class="restaurants__card">
                             <span class="badge_nouveau">Nouveau</span>
@@ -73,7 +86,8 @@
                             </figcaption>
                         </figure>
                     </a>
-        
+                </div>
+                <div class="card">
                     <a href="./pages_resto_html/menu_la_note_enchantee.html">
                         <figure class="restaurants__card">
                             <span class="badge_nouveau">Nouveau</span>
@@ -90,8 +104,8 @@
                         </figure>
                     </a>
                 </div>
-
-                <div class="container__card">
+                <div class="card">
+                
                     <a href="./pages_resto_html/menu_a_la_francaise.html">
                         <figure class="restaurants__card">
                             <img class="restaurants__card__img" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo du restaurant À la française">
@@ -106,7 +120,8 @@
                             </figcaption>
                         </figure>
                     </a>
-        
+                </div>
+                <div class="card">
                     <a href="./pages_resto_html/menu_le_delice_des_sens.html">
                         <figure class="restaurants__card">
                             <img class="restaurants__card__img" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo du restaurant Le délice des sens">
