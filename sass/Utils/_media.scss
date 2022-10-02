@@ -2,13 +2,12 @@
     .tuto {
         &__steps {
             display: flex;
-            flex: wrap;
-                &__card {
-                    flex: 1;
-                    margin: 0;
-                    margin-left: 7rem; 
-                   
-                }  
+            flex-wrap: wrap;
+            &__card {
+                flex: 1;
+                margin: 0;
+                margin-left: 7rem;              
+            }  
         }
     }
     .restaurants__container {
