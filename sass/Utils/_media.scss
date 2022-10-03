@@ -2,9 +2,11 @@
     .tuto {
         &__steps {
             display: flex;
+            align-items: center;
+            justify-content: space-around;
             flex-wrap: wrap;
             &__card {
-                flex: 1;
+                width: 40%;
                 margin: 0;
                 margin-left: 7rem;              
             }  
@@ -12,16 +14,13 @@
     }
     .restaurants__container {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
         .restaurants__card {
            width: 700px;
            margin: 1.5rem;
-           margin-bottom: 3rem;
-            
-          }
+           margin-bottom: 3rem; 
+        }
     }
 
     .menu { 
@@ -41,7 +40,21 @@
     }
 }
     @media screen and (min-width: 1024px) {
-        .restaurants__container {       
+        .tuto {
+            &__steps { 
+                flex-wrap: nowrap;
+                &__card {
+                    width: 30%;
+                               
+                }  
+            }
+        }
+        .restaurants__container {  
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; 
+            justify-content: space-around; 
+            align-items: center;  
             .restaurants__card {
                width: 450px;  
             }
