@@ -1,98 +1,93 @@
 @media screen and (min-width: 799px) {
-    .tuto {
-        &__steps {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            &__card {
-                width: 40%;
-                margin: 0;
-                margin-left: 7rem;              
-            }  
-        }
+  .tuto {
+    &__steps {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      &__card {
+        width: 40%;
+        margin: 0;
+        margin-left: 7rem;
+      }
     }
-    .restaurants__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .restaurants__card {
-           width: 700px;
-           margin: 1.5rem;
-           margin-bottom: 3rem; 
-        }
+  }
+  .restaurants__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .restaurants__card {
+      width: 700px;
+      margin: 1.5rem;
+      margin-bottom: 3rem;
     }
+  }
 
-    .menu { 
-        &__container { 
-        @include flexcenter;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-            & .container {
-               margin-left: 30px;
-                & .menu__card {              
-                    width: 350px;
-                    
-                }                 
-            }               
-        }         
+  .menu {
+    &__container {
+      @include flexcenter;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      & .container {
+        margin-left: 30px;
+        & .menu__card {
+          width: 350px;
+        }
+      }
     }
+  }
 }
-    @media screen and (min-width: 1024px) {
-        .tuto {
-            &__steps { 
-                flex-wrap: nowrap;
-                &__card {
-                    width: 30%;
-                               
-                }  
-            }
-        }
-        .restaurants__container {  
-           @include flexAround;
-            flex-direction: row;
-            flex-wrap: wrap; 
-            .restaurants__card {
-               width: 450px;  
-            }
-        }
-        .menu { 
-            &__container {
-               @include flexAround;
-                & .container {
-                    margin-left: 0px;
-                    & .menu__card {              
-                        width: 350px;
-                    }                 
-                }               
-            }         
-        }
+@media screen and (min-width: 1024px) {
+  .tuto {
+    &__steps {
+      flex-wrap: nowrap;
+      &__card {
+        width: 30%;
+      }
     }
-    @media screen and (min-width: 1280px) {
-        .hero_resto{
-            & img {
-               max-width: 1440px;
-               margin: auto;
-               display: flex;
-           }       
-         }
-        
-        .restaurants__container {       
-            .restaurants__card {
-               width: 550px;  
-            }
-        }
-        .menu { 
-            &__container {
-               
-                & .container {
-                  
-                    & .menu__card {              
-                        width: 400px;
-                    }                 
-                }               
-            }         
-        }
-        
+  }
+  .restaurants__container {
+    @include flexAround;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .restaurants__card {
+      width: 450px;
     }
+  }
+  .menu {
+    &__container {
+      @include flexAround;
+      & .container {
+        margin-left: 0px;
+        & .menu__card {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero_resto {
+    & img {
+      max-width: 1440px;
+      margin: auto;
+      display: flex;
+    }
+  }
+
+  .restaurants__container {
+    .restaurants__card {
+      width: 550px;
+    }
+  }
+  .menu {
+    &__container {
+      & .container {
+        & .menu__card {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
