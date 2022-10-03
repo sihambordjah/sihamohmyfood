@@ -25,15 +25,15 @@
 
     .menu { 
         &__container { 
-        display: flex;
+        @include flexcenter;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+        
             & .container {
                margin-left: 30px;
                 & .menu__card {              
                     width: 350px;
+                    
                 }                 
             }               
         }         
@@ -50,29 +50,33 @@
             }
         }
         .restaurants__container {  
-            display: flex;
+           @include flexAround;
             flex-direction: row;
             flex-wrap: wrap; 
-            justify-content: space-around; 
-            align-items: center;  
             .restaurants__card {
                width: 450px;  
             }
         }
         .menu { 
             &__container {
-                display: flex;  
+               @include flexAround;
                 & .container {
-                    flex: 1 1 auto;
-                    margin-left: 15px;
+                    margin-left: 0px;
                     & .menu__card {              
-                        width: 300px;
+                        width: 350px;
                     }                 
                 }               
             }         
         }
     }
     @media screen and (min-width: 1280px) {
+        .hero_resto{
+            & img {
+               max-width: 1440px;
+               margin: auto;
+               display: flex;
+           }       
+         }
         
         .restaurants__container {       
             .restaurants__card {
@@ -83,8 +87,7 @@
             &__container {
                
                 & .container {
-                   
-                   
+                  
                     & .menu__card {              
                         width: 400px;
                     }                 
@@ -93,13 +96,3 @@
         }
         
     }
-
-@media screen and (min-width: 1920px){
-    .hero_resto{
-     & img {
-        max-width: 1440px;
-        margin: auto;
-        display: flex;
-    }       
-  }
-}
