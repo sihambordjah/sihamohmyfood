@@ -136,10 +136,10 @@ h2 {
   }
   .menu__container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .menu__container .container {
     margin-left: 30px;
@@ -157,38 +157,37 @@ h2 {
   }
   .restaurants__container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .restaurants__container .restaurants__card {
     width: 450px;
   }
   .menu__container {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   .menu__container .container {
-    flex: 1 1 auto;
-    margin-left: 15px;
+    margin-left: 0px;
   }
   .menu__container .container .menu__card {
-    width: 300px;
+    width: 350px;
   }
 }
 @media screen and (min-width: 1280px) {
+  .hero_resto img {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+  }
   .restaurants__container .restaurants__card {
     width: 550px;
   }
   .menu__container .container .menu__card {
     width: 400px;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero_resto img {
-    max-width: 1440px;
-    margin: auto;
-    display: flex;
   }
 }
 .btn {
