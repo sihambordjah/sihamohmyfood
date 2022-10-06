@@ -8,7 +8,7 @@ Lien du site test :
 
 https://sihambordjah.github.io/sihamohmyfood/
 
-Objectifs
+## Objectifs
 
 1. Développer un site proposant le menu de 4 grands restaurants parisiens.
 2. Permettre la réservation en ligne et la composition de menus.
