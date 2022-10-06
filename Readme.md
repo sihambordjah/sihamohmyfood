@@ -7,3 +7,10 @@ Ohmyfood ! est une entreprise de commande de repas en ligne. Qui permet aux util
 Lien du site test :
 
 https://sihambordjah.github.io/sihamohmyfood/
+
+##Objectifs
+
+---
+
+1. Développer un site proposant le menu de 4 grands restaurants parisiens.
+2. Permettre la réservation en ligne et la composition de menus.
