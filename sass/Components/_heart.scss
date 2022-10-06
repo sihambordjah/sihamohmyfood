@@ -1,15 +1,13 @@
-
 /*il faut ajouter des commentaire*/
-.heart{
-    font-size: 25px;
-    color: grey;
-    margin-right: 20px;
-    &:hover{
-        animation: fill 1s ease-out;
-        background: linear-gradient($color-secondaire, $color-primaire);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-weight: bold;
-    }
+.heart {
+  font-size: 25px;
+  color: grey;
+  margin-right: 20px;
+  &:hover {
+    animation: fill 1s ease-out;
+    background: linear-gradient($color-secondaire, $color-primaire);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
 }
