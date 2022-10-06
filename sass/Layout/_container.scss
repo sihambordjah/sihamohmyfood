@@ -1,53 +1,51 @@
-
 // =========INDEX=========
 // LOCALISATION
 // HERO
 // TUTO
 // RESTAURANTS
 
-
 // -----------LOCALISATION-----------
 .locations {
- @extend %flexCenter;
+  @extend %flexCenter;
   height: 50px;
   background-color: rgba(234, 234, 232, 0.747);
   font-size: 18px;
-    .location {
-          margin-right: 20px;
-       
-      &__icon {
-          margin-right: 10px;
-          color:$color-dark-clair;
-        }
-      &__text {
-          font-weight: bold;
-          color:$color-dark-tres-clair;
-          text-shadow: 5px 6px rgba(247, 247, 246, 0.747);
-        }
-      }
-  }
-  
-  // -----------HERO-----------
-  .hero{
-    @extend %flexCenter;
-    padding: 40px 30px 55px 30px;
-    background-color: $ombre-light;
-    text-align: center;
-    flex-direction: column;
-    &__titre {
-        margin-bottom: 20px;
-        font-weight: bolder; 
+  .location {
+    margin-right: 20px;
+
+    &__icon {
+      margin-right: 10px;
+      color: $color-dark-clair;
     }
     &__text {
-        margin-bottom: 30px;
-        color: 	rgb(169,169,169);
+      font-weight: bold;
+      color: $color-dark-tres-clair;
+      text-shadow: 5px 6px rgba(247, 247, 246, 0.747);
     }
+  }
+}
+
+// -----------HERO-----------
+.hero {
+  @extend %flexCenter;
+  padding: 40px 30px 55px 30px;
+  background-color: $ombre-light;
+  text-align: center;
+  flex-direction: column;
+  &__titre {
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+  &__text {
+    margin-bottom: 30px;
+    color: rgb(169, 169, 169);
+  }
 }
 
 // -----------TUTO-----------
-.tuto{
+.tuto {
   padding: 2rem 1rem;
- & .tuto-container {
+  & .tuto-container {
     position: relative;
   }
   &__titre {
@@ -74,7 +72,7 @@
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       &__icon {
         margin-left: 30px;
-        color: rgba(0,0,0,0.40);
+        color: rgba(0, 0, 0, 0.4);
         font-size: 20px;
       }
       &__text {
@@ -84,17 +82,17 @@
         font-size: 17px;
       }
       &:before {
-        content:counter(repas); /* on affiche le compteur */
+        content: counter(repas); /* on affiche le compteur */
         /*padding: 7px 10px 7px 10px;*/
         height: 1.75rem;
         width: 1.75rem;
         @extend %flexCenter;
         /*vertical-align: top;*/
-        background: #9356DC;
+        background: #9356dc;
         border-radius: 50%;
         font-weight: bold;
         font-size: 13px;
-        color: white;	
+        color: white;
         position: absolute;
         left: -13px;
       }
@@ -118,15 +116,15 @@
     border-radius: 10px;
     @include shadow;
     &__img {
-        display: block;
-        max-height: 175px;
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        object-fit: cover;
+      display: block;
+      max-height: 175px;
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      object-fit: cover;
     }
     &__txt {
-        padding: 20px 15px 20px 15px;
-       @include flexBetween;
+      padding: 20px 15px 20px 15px;
+      @include flexBetween;
     }
-  }  
+  }
 }

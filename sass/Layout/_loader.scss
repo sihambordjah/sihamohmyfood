@@ -1,53 +1,36 @@
-
 .container_loader {
-    position: fixed;
-    height: 100%;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: $color-dark-tres-clair;
+  z-index: 10000;
+  animation: jump 3s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  @extend %flexColumnCenter;
+  &__text {
+    color: $color-secondaire;
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+  &__loading {
     width: 100%;
-    left: 0;
-    top: 0;
-    background-color: $color-dark-tres-clair;
-    z-index: 10000;
-    animation: jump 3s;
-    animation-delay: 2s;
-    animation-fill-mode: both;
-    @extend %flexColumnCenter;
-    &__text {
-        color: $color-secondaire;
-        margin-bottom: 25px;
-        font-size: 20px;
-        letter-spacing: 2px;
+    height: auto;
+    @include flexcenter;
+    & .line_box {
+      width: 40%;
+      height: 20px;
+      border: 2px solid $color-primaire;
+      border-radius: 20px;
+      & .line {
+        height: 16px;
+        border-radius: 20px;
+        background: $color-tertiaire;
+        animation: loading 2s forwards cubic-bezier(0, 0, 1, 1);
+      }
     }
-    &__loading {
-        width: 100%;
-        height: auto;
-        @include flexcenter;
-        & .line_box {
-            width: 40%;
-            height: 20px;
-            border: 2px solid $color-primaire;
-            border-radius: 20px;
-            & .line {
-                height: 16px;
-                border-radius: 20px;
-                background: $color-tertiaire; 
-                animation: loading 2s forwards cubic-bezier(0, 0, 1, 1); 
-            }         
-        }       
-    }
-}
-@keyframes loading {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-    
-}
-@keyframes jump {
-    100%{
-        opacity: 0;
-        z-index: -20;
-    }
-    
+  }
 }
