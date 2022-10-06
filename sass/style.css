@@ -54,6 +54,36 @@ h2 {
   flex-direction: column;
 }
 
+/* Loader */
+@-webkit-keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes jump {
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
+@keyframes jump {
+  100% {
+    opacity: 0;
+    z-index: -20;
+  }
+}
+/* Menu */
 @-webkit-keyframes slidemenu {
   0% {
     transform: scale(0);
@@ -62,7 +92,6 @@ h2 {
     transform: scale(1);
   }
 }
-
 @keyframes slidemenu {
   0% {
     transform: scale(0);
@@ -207,8 +236,8 @@ h2 {
   opacity: 1;
 }
 .btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transform: scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   opacity: 0.8;
 }
 
@@ -236,8 +265,8 @@ h2 {
   -webkit-animation: fill 1s ease-out;
           animation: fill 1s ease-out;
   background: linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
   font-weight: bold;
 }
@@ -292,35 +321,6 @@ h2 {
           animation: loading 2s forwards cubic-bezier(0, 0, 1, 1);
 }
 
-@-webkit-keyframes loading {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes loading {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes jump {
-  100% {
-    opacity: 0;
-    z-index: -20;
-  }
-}
-@keyframes jump {
-  100% {
-    opacity: 0;
-    z-index: -20;
-  }
-}
 .header {
   height: 70px;
   background-color: #f7f7f7;
@@ -407,7 +407,7 @@ h2 {
   height: 1.75rem;
   width: 1.75rem;
   /*vertical-align: top;*/
-  background: #9356DC;
+  background: #9356dc;
   border-radius: 50%;
   font-weight: bold;
   font-size: 13px;
