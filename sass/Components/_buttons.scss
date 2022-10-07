@@ -10,9 +10,9 @@
   @include gradient-color;
   @include shadow;
   cursor: pointer;
-  transform: scale(1);
-  transition: transform 500ms;
-  opacity: 1;
+  transform: scale(1); //proprieté qui permet de faire pivoter d'un element
+  transition: transform 500ms; //transition avec la proprieté transform
+  opacity: 1; //définit la transparence d'un élément
   &:hover {
     transform: scale(1.1);
     @include darker-shadow;
