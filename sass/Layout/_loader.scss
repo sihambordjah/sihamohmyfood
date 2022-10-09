@@ -5,11 +5,11 @@
   left: 0;
   top: 0;
   background-color: $color-dark-tres-clair;
-  z-index: 10000;
-  animation: jump 3s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
   @extend %flexColumnCenter;
+  z-index: 10000; //place loader au-dessus de la page d'accueil
+  animation: jump 1s; //animation disparition de loader
+  animation-fill-mode: both;
+  animation-delay: 2s;
   &__text {
     color: $color-secondaire;
     margin-bottom: 25px;
@@ -29,7 +29,7 @@
         height: 16px;
         border-radius: 20px;
         background: $color-tertiaire;
-        animation: loading 2s forwards cubic-bezier(0, 0, 1, 1);
+        animation: loading 2s forwards cubic-bezier(0, 0, 1, 1); //animation de la ligne loading
       }
     }
   }
