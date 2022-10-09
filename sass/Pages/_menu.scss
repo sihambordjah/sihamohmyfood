@@ -1,114 +1,107 @@
-
 .header {
-    &--menu{
-        position: relative;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
-    }
-    &--back_arrow {
-        @include flexcenter;
-        font-size: 1.5rem;
-        position:absolute;
-        left: 2rem;
-        height: 2.5rem;
-        width: 2rem;
-        top:25%;
-        transform: translate(-30%);  
-    }
+  &--menu {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px 0px 0px inset;
+  }
+  &--back_arrow {
+    @include flexcenter;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 2rem;
+    height: 2.5rem;
+    width: 2rem;
+    top: 25%;
+    transform: translate(-30%);
+  }
 }
 
-.hero_resto{
-    & img {
-        height: 250px;
-        width: 100%;
-    }
+.hero_resto {
+  & img {
+    height: 250px;
+    width: 100%;
+  }
 }
-.main{
-    background-color: $ombre-light;
-    margin-top: -45px;
-    position: relative;
-    z-index: 1;
-    padding: 35px 15px 80px 15px;
-    border-radius: 45px 45px 0 0;
-        &__header{
-           @include flexBetween;
-            margin-bottom: 45px;
-        }       
+.main {
+  background-color: $ombre-light;
+  margin-top: -45px;
+  position: relative;
+  z-index: 1;
+  padding: 35px 15px 80px 15px;
+  border-radius: 45px 45px 0 0;
+  &__header {
+    @include flexBetween;
+    margin-bottom: 45px;
+  }
 }
 /*--------------pour le menu-------------------*/
 .menu {
-    & .container {
-        margin-top: 30px;
-        margin-bottom:30px; 
+  & .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  & .botton {
+    @include flexcenter;
+  }
+  &__entrees {
+    text-transform: uppercase;
+    color: $color-dark-clair;
+    font-weight: 500;
+    margin-bottom: 20px;
+    & u {
+      text-decoration: $color-tertiaire 3px underline;
+      text-underline-offset: 0.5rem;
     }
-    & .botton {
-        @include flexcenter;
-    }
-    &__entrees {
-        text-transform: uppercase;
-        color: $color-dark-clair;
-        font-weight: 500;
-        margin-bottom: 20px;
-            & u {
-            text-decoration: $color-tertiaire 3px underline;
-            text-underline-offset: 0.5rem;
-        } 
-    }
+  }
 
-    &__card {
-        height: 70px;
-        width: 100%;
-        background-color: white;
-        border-radius: 12px ;
-        padding-left: 10px;
-        margin-bottom: 15px;
-        box-shadow: -5px -5px 41px 5px #D8D8D8;
-        @include flexcenter;
-        animation: slidemenu .5s;
-        animation-timing-function: cubic-bezier(.57,-0.3,.34,1.2);
-        animation-fill-mode: both;
-        transform: scale(0);
-        cursor: pointer;
+  &__card {
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    border-radius: 12px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    box-shadow: -5px -5px 41px 5px #d8d8d8;
+    @include flexcenter;
+    animation: slidemenu 0.5s;
+    animation-timing-function: cubic-bezier(0.57, -0.3, 0.34, 1.2);
+    animation-fill-mode: both;
+    transform: scale(0);
+    cursor: pointer;
+    overflow: hidden;
+    &__txt {
+      width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &--over {
+        white-space: nowrap;
         overflow: hidden;
-        &__txt {
-            width: 90%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            &--over{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        &__price {
-            margin-top: 20px;
-            margin-left: 20px;
-            
-            }
-        &__checkbox {
-                height: 70px;
-                width: 80px;
-                background-color: $color-tertiaire;
-                border-radius: 0 12px 12px 0;
-                @include flexcenter;
-                opacity: 0; 
-                transition: all 0.6s ease-in-out;
-                margin-right: -70px;
-                margin-left: 25px;
-            }   
-        &:hover :nth-child(3) {
-                opacity: 1;
-                margin-right: 0;
-            }   
-        &:hover .check_icon {
-                opacity: 1;
-                transform: rotate(360deg);
-        }          
+        text-overflow: ellipsis;
+      }
     }
+    &__price {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    &__checkbox {
+      height: 70px;
+      width: 80px;
+      background-color: $color-tertiaire;
+      border-radius: 0 12px 12px 0;
+      @include flexcenter;
+      opacity: 0;
+      transition: margin-right 0.6s ease-in-out;
+      margin-right: -70px;
+      margin-left: 25px;
+    }
+    &:hover :nth-child(3) {
+      opacity: 1;
+      margin-right: 0;
+    }
+    &:hover .check_icon {
+      opacity: 1;
+      transform: rotate(360deg);
+    }
+  }
 }
-
-
-
-
-
-
