@@ -405,6 +405,9 @@ h2 {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.tuto__steps__card:last-child {
+  background-color: rgba(165, 108, 192, 0.1294117647);
+}
 .tuto__steps__card__icon {
   margin-left: 30px;
   color: rgba(0, 0, 0, 0.4);
@@ -418,17 +421,19 @@ h2 {
 }
 .tuto__steps__card:before {
   content: counter(repas); /* on affiche le compteur */
-  /*padding: 7px 10px 7px 10px;*/
   height: 1.75rem;
   width: 1.75rem;
   /*vertical-align: top;*/
-  background: #9356dc;
+  background: hsl(267deg, 72%, 64%);
   border-radius: 50%;
   font-weight: bold;
   font-size: 13px;
   color: white;
   position: absolute;
   left: -13px;
+}
+.tuto__steps__card:hover {
+  background-color: rgba(208, 140, 240, 0.1294117647);
 }
 
 .restaurants {
