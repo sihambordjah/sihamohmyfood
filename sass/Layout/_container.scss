@@ -48,6 +48,7 @@
   & .tuto-container {
     position: relative;
   }
+
   &__titre {
     margin: 40px 0 30px 0px;
     text-shadow: 5px 5px #0000;
@@ -70,6 +71,9 @@
       padding: 1.75rem 1.75rem 1.75rem 0;
       border-radius: 20px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      &:last-child {
+        background-color: #a56cc021;
+      }
       &__icon {
         margin-left: 30px;
         color: rgba(0, 0, 0, 0.4);
@@ -83,18 +87,20 @@
       }
       &:before {
         content: counter(repas); /* on affiche le compteur */
-        /*padding: 7px 10px 7px 10px;*/
         height: 1.75rem;
         width: 1.75rem;
         @extend %flexCenter;
         /*vertical-align: top;*/
-        background: #9356dc;
+        background: hsl(267, 72%, 64%);
         border-radius: 50%;
         font-weight: bold;
         font-size: 13px;
         color: white;
         position: absolute;
         left: -13px;
+      }
+      &:hover {
+        background-color: #d08cf021;
       }
     }
   }
