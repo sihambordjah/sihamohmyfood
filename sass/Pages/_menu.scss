@@ -69,7 +69,6 @@
     animation: slidemenu 0.5s;
     animation-timing-function: cubic-bezier(0.57, -0.3, 0.34, 1.2);
     animation-fill-mode: both;
-    transform: scale(0);
     cursor: pointer;
     overflow: hidden;
     &__txt {
