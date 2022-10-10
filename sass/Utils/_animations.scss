@@ -24,7 +24,7 @@
     opacity: 1;
   }
 }
-// Animation d'apparition des "cards" pour les menus
+// Animation d'apparition des "pl" pour les menus
 @keyframes slidemenu {
   0% {
     transform: scale(0);
@@ -35,7 +35,7 @@
 }
 .menu {
   & .delay-1 {
-    animation-delay: 0.1s;
+    animation-delay: 0s;
   }
   & .delay-2 {
     animation-delay: 0.2s;
